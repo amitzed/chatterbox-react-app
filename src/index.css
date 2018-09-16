@@ -2,4 +2,31 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  /* background-color: blue; */
+}
+
+.chat-list {
+  background-color: #78D4D0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 0 0 5px;
+  overflow: scroll;
+}
+
+/* .chat-list {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100%;
+  font-size: 34px;
+  font-weight: 300;
+} */
+
+.chat .chat-member {
+  background-color: #FB9800;
+  margin-bottom: 9px;
+  padding: 7px 9px;
+  border-radius: 40%;
+  display: inline;
 }
