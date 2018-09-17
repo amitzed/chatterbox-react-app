@@ -1,12 +1,12 @@
-import React from 'react'
+ import React from 'react'
 
-class Chat extends React.Component {
-  render() {
+function Chat(props) {
     return (
       <div className="chat">
+        <div className="chat-member">{props.member}</div>
+        <div className="chat-text">{props.text}</div>
       </div>
     )
-  }
 }
 
 export default Chat;

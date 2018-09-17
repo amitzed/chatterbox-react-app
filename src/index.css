@@ -1,7 +1,15 @@
+
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 100%;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  height: 100%;
   /* background-color: blue; */
 }
 
@@ -29,4 +37,17 @@ body {
   padding: 7px 9px;
   border-radius: 40%;
   display: inline;
+}
+
+.app {
+  /* text-align: center; */
+  height: 100%;
+  display: grid;
+}
+
+.chat-list {
+  height: 100%;
+  padding: 10px;
+  overflow: scroll;
+  box-sizing: border-box;
 }

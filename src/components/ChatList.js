@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Chat from './Chat';
 
 class ChatList extends React.Component {
   render() {
@@ -7,10 +7,9 @@ class ChatList extends React.Component {
       <div className="chat-list">
         {this.props.chats.map((chat, index) => {
           return (
-            <div key={index} className="chat">
-              <div className="chat-member">{chat.senderId}</div>
-              <div className="chat-text">{chat.text}</div>
-            </div>
+            
+            <Chat key={index} member={chat.senderId} text={chat.text} />
+
           )
         })}
       </div>
