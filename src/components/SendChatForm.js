@@ -18,7 +18,11 @@ class SendChatForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    console.log(this.state.chat)
+    // console.log(this.state.chat)
+    this.props.sendMessage(this.state.chat)
+    this.setState({
+      chat: ''
+    })
   }
 
   render() {
