@@ -7,6 +7,7 @@ class SendChatForm extends React.Component {
       chat: ''
     }
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e) {
@@ -15,11 +16,22 @@ class SendChatForm extends React.Component {
     })
   }
 
-  render() {
+  handleSubmit(e) {
+    e.preventDefault()
     console.log(this.state.chat)
+  }
+
+  render() {
+    // console.log(this.state.chat)
     return (
-      <form className="send-chat-form">
-        <input onChange={this.handleChange} value={this.state.chat} placeholder="Type and <ENTER> to Send Chat" type="text" />
+      <form
+        onSubmit={this.handleSubmit}
+        className="send-chat-form">
+        <input
+          onChange={this.handleChange}
+          value={this.state.chat}
+          placeholder="Type and <ENTER> to Send Chat"
+          type="text" />
       </form>
     )
   }
