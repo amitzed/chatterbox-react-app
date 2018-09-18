@@ -80,7 +80,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <BoxList subscribeToRoom={this.subscribeToRoom} rooms={[...this.state.joinableRooms, ...this.state.joinedRooms]} />
+        <BoxList
+          roomId={this.state.roomId}
+          subscribeToRoom={this.subscribeToRoom}
+          rooms={[...this.state.joinableRooms, ...this.state.joinedRooms]} />
         <ChatList chats={this.state.chats} />
         <SendChatForm sendMessage={this.sendMessage} />
         <NewBoxForm />
