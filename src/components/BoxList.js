@@ -16,7 +16,7 @@ class BoxList extends React.Component {
               className={"box " + active}>
               <a
                 onClick={() => this.props.subscribeToRoom(room.id)}
-                href="#"># {room.name}
+                href="#">&rArr; {room.name}
               </a>
             </li>
           )

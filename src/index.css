@@ -3,24 +3,59 @@ html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  font-weight: 200;
   height: 100%;
 }
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  font-weight: 200;
   height: 100%;
-  /* background-color: blue; */
+  color: #BF7AB6;
 }
 
+/* CSS GRID */
+.app {
+  /* text-align: center; */
+  height: 100%;
+  display: grid;
+  /* Below: (column #, Fraction units) */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 60px;
+  /* BELOW: b=box c=chat t=text n=newbox */
+  grid-template-areas:
+  "b c c c"
+  "b c c c"
+  "b c c c"
+  "b c c c"
+  "b c c c"
+  "t n n n";
+}
 .chat-list {
-  background-color: #FF5600;
+  grid-area: c;
+  background-color: #F0F0DE;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
   padding: 0 0 0 5px;
   overflow: scroll;
 }
+.boxes-list {
+  grid-area: b;
+  background-color: #D1DA38;
+  padding: 10px;
+  height: 100%;
+  overflow: scroll;
+  box-sizing: border-box;
+}
+.send-chat-form {
+  grid-area: t;
+}
+.new-box-form {
+  grid-area: n;
+}
+
 
 .chat .chat-member {
   background-color: #87A765;
@@ -30,20 +65,22 @@ body {
   display: inline;
 }
 
-.app {
-  /* text-align: center; */
-  height: 100%;
-  display: grid;
-}
 
-.boxes-list {
-  background-color: #78D4D0;
-  padding: 10px;
-  height: 100%;
+.boxes-list ul {
+  list-style-type: none;
+  padding-right: 0;
   overflow: scroll;
-  box-sizing: border-box;
 }
-
-.boxes-list .room.active a {
+.boxes-list li {
+  margin: 35px 0;
+}
+.boxes-list .box a {
+  text-decoration: none;
+  font-weight: bold;
+}
+.boxes-list .box.active a {
   color: #F6D000;
+}
+.boxes-list h2 {
+  color: #F16150;
 }
