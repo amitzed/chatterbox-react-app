@@ -32,6 +32,7 @@ class SendChatForm extends React.Component {
         onSubmit={this.handleSubmit}
         className="send-chat-form">
         <input
+          disabled={this.props.disabled}
           onChange={this.handleChange}
           value={this.state.chat}
           placeholder="Type and <ENTER> to Send Chat"
