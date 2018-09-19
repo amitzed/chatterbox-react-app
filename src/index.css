@@ -6,6 +6,12 @@ html {
   font-weight: 200;
   height: 100%;
   background-color: #BF7AB6;
+  background: linear-gradient(135deg, #BF7AB6, #F16150, #D1DA38);
+ background-size: 200% 200%;
+
+ -webkit-animation: background-move 15s ease infinite;
+ -moz-animation: background-move 15s ease infinite;
+ animation: background-move 15s ease infinite;
 }
 body {
   margin: 0;
@@ -14,6 +20,12 @@ body {
   font-weight: 200;
   height: 100%;
   color: #BF7AB6;
+  background-image: url('/images/chatter3.jpg');
+  border-radius: 50%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 150%;
 }
 
 h4 {
@@ -58,11 +70,13 @@ h6 {
 .chat-list {
   grid-area: c;
   background-color: #F0F0DE;
+  background-size: cover;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
   padding: 0 0 0 5px;
   overflow: scroll;
+  opacity: .95;
 }
 .boxes-list {
   grid-area: b;
@@ -71,12 +85,15 @@ h6 {
   height: 100%;
   overflow: scroll;
   box-sizing: border-box;
+  opacity: .95;
 }
 .new-box-form {
   grid-area: n;
+  opacity: .95;
 }
 .send-chat-form {
   grid-area: t;
+  opacity: .95;
 }
 /* End CSS GRID */
 
@@ -199,7 +216,22 @@ h6 {
 }
 
 /* ************** */
-
+/* Other Animations */
+@-webkit-keyframes background-move {
+     0%{background-position:0% 50%}
+     50%{background-position:100% 50%}
+     100%{background-position:0% 50%}
+ }
+ @-moz-keyframes background-move {
+     0%{background-position:0% 50%}
+     50%{background-position:100% 50%}
+     100%{background-position:0% 50%}
+ }
+ @keyframes background-move {
+     0%{background-position:0% 50%}
+     50%{background-position:100% 50%}
+     100%{background-position:0% 50%}
+ }
 
 /* ************** */
 #root {
