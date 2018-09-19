@@ -30,11 +30,11 @@ class NewBoxForm extends React.Component {
             value={this.state.chatBoxName}
             onChange={this.handleChange}
             type="text"
-            placeholder="Make a New Chatterbox"
+            placeholder="Start New Chatterbox"
             required />
           <button
             id="btn-create-box"
-            type="submit">+</button>
+            type="submit">&diams;</button>
         </form>
       </div>
     )

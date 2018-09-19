@@ -22,7 +22,7 @@ class ChatList extends React.Component {
       return (
       <div className="chat-list">
         <div className="join-chatbox">
-          &#x2610;&#x263a; Pick a Chat Box to Start &dArr; &uArr; &rArr; &lArr; Chatting &#x263a;&#x2610;
+          <h5>&#x2610;</h5>&#x263a; <h4>Pick a Chatterbox</h4> <h6>&reg;</h6> <h4>to Start Chatting</h4> &#x263a;<h5>&#x2610;</h5>
         </div>
       </div>
     )}

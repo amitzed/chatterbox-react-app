@@ -7,7 +7,7 @@ class BoxList extends React.Component {
     return (
       <div className="boxes-list">
         <ul>
-          <h3>Your Chat Boxes: &reg; &copy; </h3>
+          <h2>Chatterboxes:</h2>
         {orderedBoxes.map(room => {
           const active = this.props.roomId === room.id ? "active" : "";
           return (
